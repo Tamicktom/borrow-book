@@ -3,13 +3,13 @@ package src;
 import java.util.Date;
 
 public class Book {
-  int id;
-  String title;
-  boolean borrowed = false;
-  Author author;
+  private int id;
+  private String title;
+  private boolean borrowed = false;
+  private Author author;
 
-  Date dateAdded = new Date();
-  Date dateUpdated = new Date();
+  private Date dateAdded = new Date();
+  private Date dateUpdated = new Date();
 
   public Book(int id, String title, Author author) {
     this.id = id;
