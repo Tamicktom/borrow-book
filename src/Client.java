@@ -2,7 +2,7 @@ package src;
 
 import java.util.List;
 
-public class Client {
+public class Client{
   private int id;
   public String name;
   private List<Borrow> borrows;

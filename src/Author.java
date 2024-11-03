@@ -1,26 +1,26 @@
 package src;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Author {
   private int id;
   public String name;
 
-  private Date birthDate;
-  private Date deathDate = null;
+  private LocalDate birthDate;
+  private LocalDate deathDate = null;
 
   public Author(int id, String name) {
     this.id = id;
     this.name = name;
   }
 
-  public Author(int id, String name, Date birthDate) {
+  public Author(int id, String name, LocalDate birthDate) {
     this.id = id;
     this.name = name;
     this.birthDate = birthDate;
   }
 
-  public Author(int id, String name, Date birthDate, Date deathDate) {
+  public Author(int id, String name, LocalDate birthDate, LocalDate deathDate) {
     this.id = id;
     this.name = name;
     this.birthDate = birthDate;
@@ -32,11 +32,15 @@ public class Author {
     return id;
   }
 
-  public Date getBirthDate() {
+  public String getName() {
+    return name;
+  }
+
+  public LocalDate getBirthDate() {
     return birthDate;
   }
 
-  public Date getDeathDate() {
+  public LocalDate getDeathDate() {
     return deathDate;
   }
 }

@@ -22,12 +22,32 @@ public class Library {
     return authors;
   }
 
+  public Author getAuthor(int id) {
+    for (Author author : authors) {
+      if (author.getId() == id) {
+        return author;
+      }
+    }
+    return null;
+  }
+
+  public Author getLastAuthor() {
+    if (authors.size() == 0) {
+      return null;
+    }
+    return authors.get(authors.size() - 1);
+  }
+
   public void addBook(Book book) {
     books.add(book);
   }
 
   public void addAuthor(Author author) {
     authors.add(author);
+  }
+
+  public void addClient(Client client) {
+    clients.add(client);
   }
 
   public List<Book> searchBooks(String title) {
@@ -38,5 +58,25 @@ public class Library {
       }
     }
     return booksFound;
+  }
+
+  public List<Author> searchAuthors(String name) {
+    List<Author> authorsFound = new ArrayList<Author>();
+    for (Author author : authors) {
+      if (author.getName().equals(name)) {
+        authorsFound.add(author);
+      }
+    }
+    return authorsFound;
+  }
+
+  public List<Client> searchClients(String name) {
+    List<Client> clientsFound = new ArrayList<Client>();
+    for (Client client : clients) {
+      if (client.getName().equals(name)) {
+        clientsFound.add(client);
+      }
+    }
+    return clientsFound;
   }
 }

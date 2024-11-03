@@ -2,10 +2,13 @@ package src;
 
 public enum MenuOptions {
   ADD_BOOK,
+  LIST_BOOK,
   SEARCH_BOOK,
   ADD_CLIENT,
+  LIST_CLIENT,
   SEARCH_CLIENT,
-  ADD_AUTHOR, 
-  SEARCH_AUTHOR, 
+  ADD_AUTHOR,
+  LIST_AUTHOR,
+  SEARCH_AUTHOR,
   EXIT
 }
