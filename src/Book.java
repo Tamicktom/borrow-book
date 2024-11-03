@@ -16,4 +16,29 @@ public class Book {
     this.title = title;
     this.author = author;
   }
+
+  // getters and setters
+  public int getId() {
+    return id;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public boolean isBorrowed() {
+    return borrowed;
+  }
+
+  public Author getAuthor() {
+    return author;
+  }
+
+  public Date getDateAdded() {
+    return dateAdded;
+  }
+
+  public Date getDateUpdated() {
+    return dateUpdated;
+  }
 }
