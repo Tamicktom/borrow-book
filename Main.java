@@ -35,6 +35,7 @@ public class Main {
         case SEARCH_CLIENT:
           break;
         case ADD_AUTHOR:
+          clearTerminal();
           System.out.println("Enter the author's name: ");
           String name = scanner.nextLine();
           System.out.println("Enter the author's birth date (YYYY-MM-DD): ");
@@ -52,13 +53,22 @@ public class Main {
 
           Author author = new Author(id, name, date);
           library.addAuthor(author);
+
+          System.out.println("Author added!");
+
+          // wait for user input
+          scanner.nextLine();
           break;
         case LIST_AUTHOR:
+          clearTerminal();
           System.out.println("Here are the authors in the library:");
           List<Author> authors = library.getAuthors();
           for (Author a : authors) {
-            System.out.println(a.getName());
+            String formatedName = String.format("%-5d %s", a.getId(), a.getName());
+            System.out.println(formatedName);
           }
+          // wait for user input
+          scanner.nextLine();
           break;
         case SEARCH_AUTHOR:
           break;
@@ -71,5 +81,9 @@ public class Main {
     }
 
     scanner.close();
+  }
+
+  private static void clearTerminal() {
+    System.out.print("\033[H\033[2J");
   }
 }

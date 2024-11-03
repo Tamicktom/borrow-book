@@ -7,6 +7,9 @@ public class Menu {
   private Scanner scanner = new Scanner(System.in);
 
   public MenuOptions choose() {
+    // clear the terminal
+    System.out.print("\033[H\033[2J");
+
     System.out.println("11. Add Book");
     System.out.println("12. List Book");
     System.out.println("13. Search Book");
